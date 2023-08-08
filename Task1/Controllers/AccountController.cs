@@ -43,8 +43,7 @@ namespace Task1.Controllers
             var data = new User();
             return View(data);
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Register(User registerUser)
         {
             if (ModelState.IsValid)
